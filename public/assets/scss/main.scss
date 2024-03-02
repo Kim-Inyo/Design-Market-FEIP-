@@ -1,0 +1,24 @@
+@mixin centralize() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CenterContainer {
+    position: fixed;
+    @include centralize();
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.HWBox {
+    @include centralize();
+    height: 50px;
+    width: 200px;
+    background-color: red;
+    font-family: Montserrat, "Open Sans";
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+}
