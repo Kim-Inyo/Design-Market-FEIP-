@@ -32,6 +32,10 @@ import AppFooter from "./components/AppFooter.vue";
     overflow-y: scroll;
 }
 
+a {
+    color: black;
+}
+
 a:link {
     text-decoration: none;
 }
@@ -41,7 +45,9 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: none;
+    color: green;
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
 }
 
 a:active {
