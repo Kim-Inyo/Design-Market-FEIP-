@@ -10,6 +10,7 @@ export default defineNuxtConfig({
                 },
             },
         ],
+        ["nuxt-svgo", {}],
     ],
 
     components: [
