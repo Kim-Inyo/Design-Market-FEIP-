@@ -29,9 +29,15 @@ import Location from "/src/assets/icons/Location.svg";
                     <p>г. Владивосток ул. Выселковая 49, стр. 3</p>
                 </li>
             </ul>
+            <button class="SubmitReq">Оставить заявку</button>
             <p class="terms">© Загдом, 2021</p>
             <a href="" class="terms">Политика конфиденциальности</a>
             <a href="" class="terms">Пользовательское соглашение</a>
+            <div class="Terms-Container">
+                <p>© Загдом, 2021</p>
+                <a href="">Политика конфиденциальности</a>
+                <a href="">Пользовательское соглашение</a>
+            </div>
         </div>
         <button class="SubmitReq">Оставить заявку</button>
     </div>
@@ -91,18 +97,64 @@ p {
     opacity: 60%;
 }
 
-.SubmitReq {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    width: 204px;
-    height: 49px;
-    padding: 16px 40px;
-    border-radius: 10px;
-    border-style: hidden;
-    background-color: #029f59;
-    color: white;
-    size: 14px;
+.FooterInfo .SubmitReq,
+.Terms-Container {
+    display: none;
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1299px) {
+    .Footer {
+        padding: 29px 16px;
+    }
+
+    .FooterInfo {
+        column-gap: 50px;
+    }
+}
+
+@media screen and (min-width: 815px) and (max-width: 1049px) {
+    .Footer {
+        padding: 29px 16px;
+    }
+
+    .FooterInfo {
+        column-gap: 50px;
+    }
+
+    .SubmitReq {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 814px) {
+    .Footer {
+        padding: 40px;
+    }
+
+    .FooterInfo {
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+    }
+
+    .terms {
+        display: none;
+    }
+
+    .SubmitReq {
+        display: none;
+    }
+
+    .FooterInfo .SubmitReq {
+        display: block;
+    }
+
+    .Terms-Container {
+        display: flex;
+        flex-flow: column;
+        gap: 16px;
+        color: #ffffff;
+        opacity: 60%;
+    }
 }
 </style>

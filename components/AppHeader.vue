@@ -22,6 +22,13 @@ import variables from "~/src/variables";
                 </div>
                 <button class="SubmitReq">Оставить заявку</button>
             </div>
+            <button class="Hamburger">
+                <div class="Hamburger-Container">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </button>
         </div>
     </div>
 </template>
@@ -79,17 +86,53 @@ a:active {
 .Number {
     font-family: Montserrat;
     cursor: default;
+    width: max-content;
 }
 
-.SubmitReq {
-    @include FitToMiddle();
-    justify-content: center;
-    cursor: pointer;
-    padding: 16px 40px;
-    border-radius: 10px;
-    border-style: hidden;
-    background-color: #029f59;
-    color: white;
-    size: 14px;
+.Hamburger {
+    display: none;
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1299px) {
+    .Navbar {
+        padding: 29px 16px;
+    }
+
+    .Shortcut {
+        gap: 30px;
+    }
+
+    .Contact {
+        @include FitToMiddle();
+        gap: 24px;
+    }
+}
+
+@media screen and (min-width: 815px) and (max-width: 1049px) {
+    .Navbar {
+        padding: 29px 16px;
+    }
+
+    .NavLinks {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 814px) {
+    .Navbar {
+        padding: 29px 16px;
+    }
+
+    .NavLinks {
+        display: none;
+    }
+
+    .Contact {
+        display: none;
+    }
+
+    .Hamburger {
+        display: block;
+    }
 }
 </style>
