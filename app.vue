@@ -5,7 +5,7 @@ import AppFooter from "./components/AppFooter.vue";
 </script>
 
 <template>
-    <div class="Container">
+    <div class="root">
         <AppHeader />
         <AppBody />
         <AppFooter />
@@ -17,40 +17,53 @@ import AppFooter from "./components/AppFooter.vue";
     font-family: "open sans";
 }
 
+.root {
+    display: flex;
+    flex-flow: column;
+    height: 98vh;
+}
+
+.Header,
+.Footer {
+    flex-shrink: 0;
+}
+
+.Body {
+    flex-grow: 1;
+}
+
 @mixin centralize() {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.Container {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    overflow-y: scroll;
+a:visited {
+    text-decoration: none;
 }
 
-a {
-    color: black;
+a:active {
+    text-decoration: none;
 }
 
 a:link {
     text-decoration: none;
 }
 
-a:visited {
-    text-decoration: none;
+ul {
+    list-style-type: none;
+    padding-left: 0%;
 }
 
-a:hover {
-    color: green;
-    text-decoration-line: underline;
-    text-underline-offset: 5px;
+button:hover {
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-color: black;
 }
 
-a:active {
-    text-decoration: none;
+.Logo {
+    width: 160px !important;
+    height: 39px !important;
 }
 </style>
