@@ -4,42 +4,45 @@ import Logo from "/src/assets/icons/Logo.svg";
 import Email from "/src/assets/icons/Email.svg";
 import PhoneIcon from "/src/assets/icons/PhoneIcon.svg";
 import Location from "/src/assets/icons/Location.svg";
+import SubmitRequestBtn from "./SubmitRequestBtn.vue";
 </script>
 
 <template>
     <div class="Footer">
-        <div class="FooterInfo">
-            <Logo class="Logo" />
-            <ul class="NavLinks">
-                <li v-for="item in variables.navs">
-                    <a :href="item.url">{{ item.label }}</a>
-                </li>
-            </ul>
-            <ul class="NavLinks">
-                <li class="NavItem">
-                    <PhoneIcon />
-                    <p>+7 (900) 900-90-90</p>
-                </li>
-                <li class="NavItem">
-                    <Email />
-                    <p>info@gmail.com</p>
-                </li>
-                <li class="NavItem">
-                    <Location class="Location" />
-                    <p>г. Владивосток ул. Выселковая 49, стр. 3</p>
-                </li>
-            </ul>
-            <button class="SubmitReq">Оставить заявку</button>
-            <p class="terms">© Загдом, 2021</p>
-            <a href="" class="terms">Политика конфиденциальности</a>
-            <a href="" class="terms">Пользовательское соглашение</a>
-            <div class="Terms-Container">
-                <p>© Загдом, 2021</p>
-                <a href="">Политика конфиденциальности</a>
-                <a href="">Пользовательское соглашение</a>
+        <div class="container">
+            <div class="FooterInfo">
+                <Logo class="Logo" />
+                <ul class="NavLinks">
+                    <li v-for="item in variables.navs">
+                        <a :href="item.url">{{ item.label }}</a>
+                    </li>
+                </ul>
+                <ul class="NavLinks">
+                    <li class="NavItem">
+                        <PhoneIcon />
+                        <p>+7 (900) 900-90-90</p>
+                    </li>
+                    <li class="NavItem">
+                        <Email />
+                        <p>info@gmail.com</p>
+                    </li>
+                    <li class="NavItem">
+                        <Location class="Location" />
+                        <p>г. Владивосток ул. Выселковая 49, стр. 3</p>
+                    </li>
+                </ul>
+                <SubmitRequestBtn class="SubmitReq" />
+                <p class="terms">© Загдом, 2021</p>
+                <a href="" class="terms">Политика конфиденциальности</a>
+                <a href="" class="terms">Пользовательское соглашение</a>
+                <div class="Terms-Container">
+                    <p>© Загдом, 2021</p>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Пользовательское соглашение</a>
+                </div>
             </div>
+            <SubmitRequestBtn class="SubmitReq" />
         </div>
-        <button class="SubmitReq">Оставить заявку</button>
     </div>
 </template>
 
@@ -60,10 +63,19 @@ p {
 
 .Footer {
     display: flex;
-    justify-content: space-between;
-    padding: 29px 88px;
+    justify-content: center;
+    padding: 33px 88px;
+    min-width: 344px;
     background-color: #254741;
     color: white;
+}
+
+.container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1264px;
 }
 
 .FooterInfo {
@@ -73,10 +85,15 @@ p {
     row-gap: 32px;
 }
 
+.Logo {
+    padding-top: 4px;
+}
+
 .NavLinks {
     display: flex;
     flex-flow: column;
     width: 210px;
+    padding-top: 16px;
     gap: 24px;
     color: white;
 }

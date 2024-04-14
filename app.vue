@@ -2,10 +2,16 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppBody from "./components/AppBody.vue";
 import AppFooter from "./components/AppFooter.vue";
+import SlideBar from "./components/SlideBar.vue";
+const SlideBarOpen = useState("IsSlideBarOpen", () => false);
+const toggleSlideBar = () => {
+    SlideBarOpen = !SlideBarOpen;
+};
 </script>
 
 <template>
     <div class="root">
+        <!-- <SlideBar toggleSlideBar={toggleSlideBar} > -->
         <AppHeader />
         <AppBody />
         <AppFooter />
@@ -20,7 +26,6 @@ import AppFooter from "./components/AppFooter.vue";
 .root {
     display: flex;
     flex-flow: column;
-    height: 98vh;
 }
 
 .Header,
@@ -36,6 +41,10 @@ import AppFooter from "./components/AppFooter.vue";
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+p {
+    margin: 0px;
 }
 
 a:visited {
@@ -56,46 +65,13 @@ ul {
     margin: 0%;
 }
 
-.SubmitReq {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    width: 204px;
-    height: 49px;
-    padding: 16px 40px;
-    border-radius: 10px;
+button {
     border-style: hidden;
-    background-color: #029f59;
-    color: white;
-    size: 14px;
 }
 
 button:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-color: black;
-}
-
-.Hamburger {
-    padding: 16px;
-    gap: 10px;
-    border-radius: 10px;
-    border-style: hidden;
-    background-color: #029f59;
-}
-
-.Hamburger-Container {
-    display: flex;
-    flex-flow: column;
-    gap: 4px;
-}
-
-.Hamburger .line {
-    display: block;
-    height: 2px;
-    width: 24px;
-    border-radius: 10px;
-    background-color: white;
 }
 
 .Logo {

@@ -2,6 +2,8 @@
 import PhoneIcon from "/src/assets/icons/PhoneIcon.svg";
 import Logo from "/src/assets/icons/Logo.svg";
 import variables from "~/src/variables";
+import SubmitRequestBtn from "./SubmitRequestBtn.vue";
+import HamburgerMenu from "./HamburgerMenu.vue";
 </script>
 
 <template>
@@ -20,15 +22,9 @@ import variables from "~/src/variables";
                     <PhoneIcon />
                     <p class="Number">+7 (900) 900-90-90</p>
                 </div>
-                <button class="SubmitReq">Оставить заявку</button>
+                <SubmitRequestBtn />
             </div>
-            <button class="Hamburger">
-                <div class="Hamburger-Container">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
-            </button>
+            <HamburgerMenu class="Hamburger" />
         </div>
     </div>
 </template>
@@ -57,10 +53,18 @@ a:active {
     text-decoration: none;
 }
 
+.Header {
+    display: flex;
+    justify-content: center;
+    min-width: 344px;
+    padding: 29px 88px;
+}
+
 .Navbar {
     @include FitToMiddle();
     justify-content: space-between;
-    padding: 29px 88px;
+    width: 100%;
+    max-width: 1264px;
 }
 
 .Shortcut {
@@ -94,7 +98,7 @@ a:active {
 }
 
 @media screen and (min-width: 1050px) and (max-width: 1299px) {
-    .Navbar {
+    .Header {
         padding: 29px 16px;
     }
 
@@ -109,7 +113,7 @@ a:active {
 }
 
 @media screen and (min-width: 815px) and (max-width: 1049px) {
-    .Navbar {
+    .Header {
         padding: 29px 16px;
     }
 
@@ -119,7 +123,7 @@ a:active {
 }
 
 @media screen and (max-width: 814px) {
-    .Navbar {
+    .Header {
         padding: 29px 16px;
     }
 
