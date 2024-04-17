@@ -2,6 +2,8 @@
 import PhoneIcon from "/src/assets/icons/PhoneIcon.svg";
 import Logo from "/src/assets/icons/Logo.svg";
 import variables from "~/src/variables";
+import SubmitRequestBtn from "./SubmitRequestBtn.vue";
+import HamburgerMenu from "./HamburgerMenu.vue";
 </script>
 
 <template>
@@ -20,8 +22,9 @@ import variables from "~/src/variables";
                     <PhoneIcon />
                     <p class="Number">+7 (900) 900-90-90</p>
                 </div>
-                <button class="SubmitReq">Оставить заявку</button>
+                <SubmitRequestBtn />
             </div>
+            <HamburgerMenu class="Hamburger" />
         </div>
     </div>
 </template>
@@ -50,10 +53,18 @@ a:active {
     text-decoration: none;
 }
 
+.Header {
+    display: flex;
+    justify-content: center;
+    min-width: 344px;
+    padding: 29px 88px;
+}
+
 .Navbar {
     @include FitToMiddle();
     justify-content: space-between;
-    padding: 29px 88px;
+    width: 100%;
+    max-width: 1264px;
 }
 
 .Shortcut {
@@ -79,17 +90,53 @@ a:active {
 .Number {
     font-family: Montserrat;
     cursor: default;
+    width: max-content;
 }
 
-.SubmitReq {
-    @include FitToMiddle();
-    justify-content: center;
-    cursor: pointer;
-    padding: 16px 40px;
-    border-radius: 10px;
-    border-style: hidden;
-    background-color: #029f59;
-    color: white;
-    size: 14px;
+.Hamburger {
+    display: none;
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1299px) {
+    .Header {
+        padding: 29px 16px;
+    }
+
+    .Shortcut {
+        gap: 30px;
+    }
+
+    .Contact {
+        @include FitToMiddle();
+        gap: 24px;
+    }
+}
+
+@media screen and (min-width: 815px) and (max-width: 1049px) {
+    .Header {
+        padding: 29px 16px;
+    }
+
+    .NavLinks {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 814px) {
+    .Header {
+        padding: 29px 16px;
+    }
+
+    .NavLinks {
+        display: none;
+    }
+
+    .Contact {
+        display: none;
+    }
+
+    .Hamburger {
+        display: block;
+    }
 }
 </style>

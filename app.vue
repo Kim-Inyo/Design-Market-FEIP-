@@ -2,10 +2,16 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppBody from "./components/AppBody.vue";
 import AppFooter from "./components/AppFooter.vue";
+import SlideBar from "./components/SlideBar.vue";
+const SlideBarOpen = useState("IsSlideBarOpen", () => false);
+const toggleSlideBar = () => {
+    SlideBarOpen = !SlideBarOpen;
+};
 </script>
 
 <template>
     <div class="root">
+        <!-- <SlideBar toggleSlideBar={toggleSlideBar} > -->
         <AppHeader />
         <AppBody />
         <AppFooter />
@@ -20,7 +26,6 @@ import AppFooter from "./components/AppFooter.vue";
 .root {
     display: flex;
     flex-flow: column;
-    height: 98vh;
 }
 
 .Header,
@@ -38,6 +43,10 @@ import AppFooter from "./components/AppFooter.vue";
     align-items: center;
 }
 
+p {
+    margin: 0px;
+}
+
 a:visited {
     text-decoration: none;
 }
@@ -53,11 +62,14 @@ a:link {
 ul {
     list-style-type: none;
     padding-left: 0%;
+    margin: 0%;
+}
+
+button {
+    border-style: hidden;
 }
 
 button:hover {
-    border-width: 1px;
-    border-style: solid;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-color: black;
 }
