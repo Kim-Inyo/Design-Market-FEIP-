@@ -65,7 +65,7 @@ p {
     display: flex;
     justify-content: center;
     padding: 33px 88px;
-    min-width: 344px;
+    min-width: 336px;
     background-color: #254741;
     color: white;
 }
@@ -146,6 +146,7 @@ p {
 @media screen and (max-width: 814px) {
     .Footer {
         padding: 40px;
+        padding-right: 0px;
     }
 
     .FooterInfo {

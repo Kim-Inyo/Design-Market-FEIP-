@@ -10,7 +10,7 @@ import HamburgerMenu from "./HamburgerMenu.vue";
     <div class="Header">
         <div class="Navbar">
             <div class="Shortcut">
-                <Logo class="Logo" />
+                <Logo class="Logo" @click="" />
                 <ul class="NavLinks">
                     <li v-for="item in variables.navs">
                         <a target="_blank" :href="item.url">{{ item.label }}</a>
