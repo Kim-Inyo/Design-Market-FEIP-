@@ -1,6 +1,8 @@
 <script setup>
 import Slider from "./Slider.vue";
 import Introduction from "./Introduction.vue";
+import Project from "./Project.vue";
+import News from "./News.vue";
 </script>
 
 <template>
@@ -8,7 +10,8 @@ import Introduction from "./Introduction.vue";
         <div class="container">
             <Slider />
             <Introduction />
-            <div>asd</div>
+            <Project />
+            <News />
         </div>
     </div>
 </template>
@@ -25,6 +28,7 @@ import Introduction from "./Introduction.vue";
 .container {
     display: flex;
     flex-flow: column;
+    align-items: center;
     width: 100%;
     max-width: 1264px;
     gap: 120px;

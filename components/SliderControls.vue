@@ -75,6 +75,10 @@ const index = useState("index", () => 0);
     border-radius: 50%;
 }
 
+.page:disabled {
+    background-color: #029f59;
+}
+
 .prev,
 .next {
     width: 48px;

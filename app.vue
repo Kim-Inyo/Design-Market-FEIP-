@@ -47,6 +47,11 @@ p {
     margin: 0px;
 }
 
+img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
 a:visited {
     text-decoration: none;
 }
@@ -77,5 +82,12 @@ button:hover {
 .Logo {
     width: 160px !important;
     height: 39px !important;
+}
+
+.sectiontitle {
+    font-family: Montserrat;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 45.6px;
 }
 </style>

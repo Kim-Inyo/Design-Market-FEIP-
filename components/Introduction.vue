@@ -4,7 +4,7 @@ import IntroductionPanel from "./IntroductionPanel.vue";
 <template>
     <div class="introduction">
         <div class="textcontainer">
-            <p class="title">
+            <p class="sectiontitle">
                 Каждый проект <br />
                 для нас — важный
             </p>
@@ -36,13 +36,6 @@ import IntroductionPanel from "./IntroductionPanel.vue";
     display: flex;
     flex-flow: row;
     gap: 16px;
-}
-
-.title {
-    font-family: Montserrat;
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 45.6px;
 }
 
 .description {
@@ -85,6 +78,11 @@ import IntroductionPanel from "./IntroductionPanel.vue";
 
     .panelcontainer {
         flex-flow: column;
+        width: 100%;
+    }
+
+    .panel {
+        width: 100%;
     }
 }
 </style>
