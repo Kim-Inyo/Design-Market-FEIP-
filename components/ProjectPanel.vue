@@ -16,7 +16,7 @@ defineProps({
         </picture>
         <div class="introduction">
             <h4 class="title">{{ title }}</h4>
-            <p class="description" v-html="description" />
+            <p class="description" v-html="description"></p>
         </div>
     </div>
 </template>
@@ -58,7 +58,6 @@ defineProps({
 
 .description {
     padding-right: 8px;
-    color: #666666;
 }
 
 @media screen and (max-width: 814px) {

@@ -2,7 +2,7 @@
 import PhoneIcon from "/src/assets/icons/PhoneIcon.svg";
 import Logo from "/src/assets/icons/Logo.svg";
 import variables from "~/src/variables";
-import SubmitRequestBtn from "./SubmitRequestBtn.vue";
+import SubmitRequestDialog from "./SubmitRequestDialog.vue";
 import HamburgerMenu from "./HamburgerMenu.vue";
 </script>
 
@@ -22,7 +22,7 @@ import HamburgerMenu from "./HamburgerMenu.vue";
                     <PhoneIcon />
                     <p class="Number">+7 (900) 900-90-90</p>
                 </div>
-                <SubmitRequestBtn />
+                <SubmitRequestDialog />
             </div>
             <HamburgerMenu class="Hamburger" />
         </div>

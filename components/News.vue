@@ -16,7 +16,7 @@ const news = [
             x1: news1_1x,
             x2: news1_2x,
         },
-        date: "20 авг 2021",
+        date: new Date("2021-08-20"),
         title: "Как сделать строительство дешевле?",
         description:
             "<p>Строительство дома можно сделать дешевле - выьрав проект...</p>",
@@ -26,7 +26,7 @@ const news = [
             x1: news2_1x,
             x2: news2_2x,
         },
-        date: "20 авг 2021",
+        date: new Date("2021-08-20"),
         title: "Почему Гуд Вилл строит лучшие дома?",
         description:
             "<p>Хотим обрадовать тех, кто планирует переезд из квартиры в дом...</p>",
@@ -36,7 +36,7 @@ const news = [
             x1: news3_1x,
             x2: news3_2x,
         },
-        date: "20 авг 2021",
+        date: new Date("2021-08-20"),
         title: "Преимущества и недостатки частного дома",
         description:
             "<p>Первое и главное: строим дом индивидуально для вас, по вашим...</p>",
@@ -46,7 +46,7 @@ const news = [
             x1: news4_1x,
             x2: news4_2x,
         },
-        date: "20 авг 2021",
+        date: new Date("2021-08-20"),
         title: "Из чего мы строим дома в ипотеку?",
         description:
             "<p>Самый популярный вопрос наших клиентов касается материалов, которы...</p>",
@@ -102,7 +102,7 @@ const news = [
     display: flex;
     flex-flow: row;
     gap: 16px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 @media screen and (max-width: 1299px) {

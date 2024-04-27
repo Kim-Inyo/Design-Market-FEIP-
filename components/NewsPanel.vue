@@ -4,10 +4,34 @@ defineProps({
         x1: String,
         x2: String,
     },
-    date: String,
+    date: Date,
     title: String,
     description: String,
 });
+
+const DatetoString = (date) => {
+    const months = [
+        "янв",
+        "фев",
+        "мар",
+        "апр",
+        "май",
+        "июн",
+        "июл",
+        "явг",
+        "сен",
+        "окт",
+        "ноя",
+        "дек",
+    ];
+    return (
+        date.getDate() +
+        " " +
+        months[date.getMonth()] +
+        " " +
+        date.getFullYear()
+    );
+};
 </script>
 <template>
     <div class="newspanel">
@@ -15,10 +39,10 @@ defineProps({
             <source :srcset="`${image.x2} 2x, ${image.x1}`" />
             <img :src="image.x1" :alt="title" class="image" />
         </picture>
-        <p class="date">{{ date }}</p>
+        <p class="date">{{ DatetoString(date) }}</p>
         <div class="introduction">
             <h4 class="title">{{ title }}</h4>
-            <p class="description" v-html="description" />
+            <p class="description" v-html="description"></p>
         </div>
     </div>
 </template>
@@ -56,10 +80,6 @@ defineProps({
     font-size: 20px;
     font-weight: 600;
     margin: 0px;
-}
-
-.description {
-    color: #666666;
 }
 
 @media screen and (max-width: 814px) {
