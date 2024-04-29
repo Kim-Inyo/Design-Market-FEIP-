@@ -10,11 +10,29 @@ import {
     DialogTrigger,
 } from "radix-vue";
 import { Icon } from "@iconify/vue";
+
+const props = defineProps({
+    color: {
+        default: "white",
+        type: String,
+    },
+    backgroundColor: {
+        default: "#029f59",
+        type: String,
+    },
+});
 </script>
 
 <template>
     <DialogRoot>
-        <DialogTrigger class="SubmitRequest">Оставить заявку</DialogTrigger>
+        <DialogTrigger
+            class="SubmitRequest"
+            v-bind:style="{
+                color: props.color,
+                'background-color': backgroundColor,
+            }"
+            >Оставить заявку</DialogTrigger
+        >
         <DialogPortal>
             <DialogOverlay class="DialogOverlay" />
             <DialogContent class="DialogContent">
@@ -81,10 +99,16 @@ import { Icon } from "@iconify/vue";
     height: 49px;
     padding: 16px 40px;
     border-radius: 10px;
+    border-style: solid;
     background-color: #029f59;
+    border-color: #029f59;
     color: white;
     font-family: montserrat;
     size: 14px;
+}
+
+.DialogOverlay {
+    z-index: 19;
 }
 
 .DialogContent {

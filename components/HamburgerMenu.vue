@@ -1,26 +1,20 @@
 <template>
-    <button class="Hamburger">
-        <div class="Hamburger-Container">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
-    </button>
+    <div class="Hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
 </template>
 
 <style scoped lang="scss">
 .Hamburger {
-    padding: 16px;
-    gap: 10px;
-    border-radius: 10px;
-    border-style: hidden;
-    background-color: #029f59;
-}
-
-.Hamburger-Container {
     display: flex;
     flex-flow: column;
     gap: 4px;
+    padding: 16px;
+    border-radius: 6px;
+    border-style: hidden;
+    background-color: #029f59;
 }
 
 .Hamburger .line {

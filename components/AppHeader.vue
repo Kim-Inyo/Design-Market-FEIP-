@@ -3,7 +3,7 @@ import PhoneIcon from "/src/assets/icons/PhoneIcon.svg";
 import Logo from "/src/assets/icons/Logo.svg";
 import variables from "~/src/variables";
 import SubmitRequestDialog from "./SubmitRequestDialog.vue";
-import HamburgerMenu from "./HamburgerMenu.vue";
+import SideBarDialog from "./SideBarDialog.vue";
 </script>
 
 <template>
@@ -24,7 +24,9 @@ import HamburgerMenu from "./HamburgerMenu.vue";
                 </div>
                 <SubmitRequestDialog />
             </div>
-            <HamburgerMenu class="Hamburger" />
+            <div class="SideBarDialog">
+                <SideBarDialog />
+            </div>
         </div>
     </div>
 </template>
@@ -93,7 +95,7 @@ a:active {
     width: max-content;
 }
 
-.Hamburger {
+.SideBarDialog {
     display: none;
 }
 
@@ -135,7 +137,7 @@ a:active {
         display: none;
     }
 
-    .Hamburger {
+    .SideBarDialog {
         display: block;
     }
 }

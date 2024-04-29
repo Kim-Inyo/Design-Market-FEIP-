@@ -5,7 +5,6 @@ import Email from "/src/assets/icons/Email.svg";
 import PhoneIcon from "/src/assets/icons/PhoneIcon.svg";
 import Location from "/src/assets/icons/Location.svg";
 import SubmitRequestDialog from "./SubmitRequestDialog.vue";
-import SubmitRequestBtn from "./SubmitRequestBtn.vue";
 </script>
 
 <template>
@@ -20,15 +19,15 @@ import SubmitRequestBtn from "./SubmitRequestBtn.vue";
                 </ul>
                 <ul class="NavLinks">
                     <li class="NavItem">
-                        <PhoneIcon />
+                        <PhoneIcon class="Icons" />
                         <p>+7 (900) 900-90-90</p>
                     </li>
                     <li class="NavItem">
-                        <Email />
+                        <Email class="Icons" />
                         <p>info@gmail.com</p>
                     </li>
                     <li class="NavItem">
-                        <Location class="Location" />
+                        <Location class="Location Icons" />
                         <p>г. Владивосток ул. Выселковая 49, стр. 3</p>
                     </li>
                 </ul>
@@ -73,10 +72,6 @@ p {
 }
 
 .container {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: start;
     width: 100%;
     max-width: 1264px;
 }
@@ -107,6 +102,10 @@ p {
     gap: 8px;
     font-family: Montserrat;
     size: 14px;
+}
+
+.Icons {
+    color: #029f59;
 }
 
 .Location {

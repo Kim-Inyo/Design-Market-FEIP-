@@ -72,6 +72,7 @@ ul {
 
 button {
     border-style: hidden;
+    padding: 0px;
 }
 
 button:hover {
