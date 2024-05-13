@@ -2,8 +2,8 @@
 import PhoneIcon from "/src/assets/icons/PhoneIcon.svg";
 import Logo from "/src/assets/icons/Logo.svg";
 import variables from "~/src/variables";
-import SubmitRequestBtn from "./SubmitRequestBtn.vue";
-import HamburgerMenu from "./HamburgerMenu.vue";
+import SubmitRequestDialog from "./SubmitRequestDialog.vue";
+import SideBarDialog from "./SideBarDialog.vue";
 </script>
 
 <template>
@@ -22,9 +22,11 @@ import HamburgerMenu from "./HamburgerMenu.vue";
                     <PhoneIcon />
                     <p class="Number">+7 (900) 900-90-90</p>
                 </div>
-                <SubmitRequestBtn />
+                <SubmitRequestDialog />
             </div>
-            <HamburgerMenu class="Hamburger" />
+            <div class="SideBarDialog">
+                <SideBarDialog />
+            </div>
         </div>
     </div>
 </template>
@@ -93,7 +95,7 @@ a:active {
     width: max-content;
 }
 
-.Hamburger {
+.SideBarDialog {
     display: none;
 }
 
@@ -135,7 +137,7 @@ a:active {
         display: none;
     }
 
-    .Hamburger {
+    .SideBarDialog {
         display: block;
     }
 }

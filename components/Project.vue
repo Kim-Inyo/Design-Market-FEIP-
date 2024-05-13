@@ -58,7 +58,8 @@ const projects = [
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 16px;
-    overflow: hidden;
+    overflow: auto;
+    overflow-y: hidden;
 }
 @media screen and (max-width: 1299px) {
     .project {

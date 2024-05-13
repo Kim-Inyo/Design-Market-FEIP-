@@ -4,7 +4,7 @@ import Logo from "/src/assets/icons/Logo.svg";
 import Email from "/src/assets/icons/Email.svg";
 import PhoneIcon from "/src/assets/icons/PhoneIcon.svg";
 import Location from "/src/assets/icons/Location.svg";
-import SubmitRequestBtn from "./SubmitRequestBtn.vue";
+import SubmitRequestDialog from "./SubmitRequestDialog.vue";
 </script>
 
 <template>
@@ -19,19 +19,21 @@ import SubmitRequestBtn from "./SubmitRequestBtn.vue";
                 </ul>
                 <ul class="NavLinks">
                     <li class="NavItem">
-                        <PhoneIcon />
+                        <PhoneIcon class="Icons" />
                         <p>+7 (900) 900-90-90</p>
                     </li>
                     <li class="NavItem">
-                        <Email />
+                        <Email class="Icons" />
                         <p>info@gmail.com</p>
                     </li>
                     <li class="NavItem">
-                        <Location class="Location" />
+                        <Location class="Location Icons" />
                         <p>г. Владивосток ул. Выселковая 49, стр. 3</p>
                     </li>
                 </ul>
-                <SubmitRequestBtn class="SubmitReq" />
+                <div class="SubmitReq">
+                    <SubmitRequestDialog />
+                </div>
                 <p class="terms">© Загдом, 2021</p>
                 <a href="" class="terms">Политика конфиденциальности</a>
                 <a href="" class="terms">Пользовательское соглашение</a>
@@ -41,12 +43,11 @@ import SubmitRequestBtn from "./SubmitRequestBtn.vue";
                     <a href="">Пользовательское соглашение</a>
                 </div>
             </div>
-            <SubmitRequestBtn class="SubmitReq" />
         </div>
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 a {
     color: white;
 }
@@ -71,16 +72,14 @@ p {
 }
 
 .container {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
     width: 100%;
     max-width: 1264px;
 }
 
 .FooterInfo {
     display: grid;
-    grid-template-columns: auto auto auto;
+    width: 100%;
+    grid-template-columns: auto auto auto 1fr;
     column-gap: 122px;
     row-gap: 32px;
 }
@@ -105,6 +104,10 @@ p {
     size: 14px;
 }
 
+.Icons {
+    color: #029f59;
+}
+
 .Location {
     width: 32px;
 }
@@ -114,7 +117,11 @@ p {
     opacity: 60%;
 }
 
-.FooterInfo .SubmitReq,
+.SubmitReq {
+    display: flex;
+    justify-content: right;
+}
+
 .Terms-Container {
     display: none;
 }
@@ -135,6 +142,7 @@ p {
     }
 
     .FooterInfo {
+        grid-template-columns: repeat(3, auto);
         column-gap: 50px;
     }
 
@@ -160,11 +168,7 @@ p {
     }
 
     .SubmitReq {
-        display: none;
-    }
-
-    .FooterInfo .SubmitReq {
-        display: block;
+        justify-content: start;
     }
 
     .Terms-Container {

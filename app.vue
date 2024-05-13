@@ -72,11 +72,18 @@ ul {
 
 button {
     border-style: hidden;
+    padding: 0px;
 }
 
 button:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-color: black;
+}
+
+::placeholder {
+    color: #9d9c9c;
+    font-family: "open sans";
+    font-size: 14px;
 }
 
 .Logo {
@@ -88,6 +95,17 @@ button:hover {
     font-family: Montserrat;
     font-size: 38px;
     font-weight: 700;
-    line-height: 45.6px;
+}
+
+.description {
+    color: #666666;
+}
+
+.DialogOverlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 </style>
