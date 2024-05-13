@@ -10,10 +10,19 @@ import SideBarDialog from "./SideBarDialog.vue";
     <div class="Header">
         <div class="Navbar">
             <div class="Shortcut">
-                <Logo class="Logo" @click="" />
+                <NuxtLink to="/"><Logo class="Logo" /></NuxtLink>
                 <ul class="NavLinks">
                     <li v-for="item in variables.navs">
-                        <a target="_blank" :href="item.url">{{ item.label }}</a>
+                        <NuxtLink
+                            class="links"
+                            :class="
+                                item.url === $route.path
+                                    ? 'text-green'
+                                    : 'text-grey'
+                            "
+                            :to="item.url"
+                            >{{ item.label }}</NuxtLink
+                        >
                     </li>
                 </ul>
             </div>
@@ -37,29 +46,25 @@ import SideBarDialog from "./SideBarDialog.vue";
     align-items: center;
 }
 
-a {
-    color: black;
+.links {
+    color: #666666;
 }
 
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
+.links:hover {
     color: green;
     text-decoration-line: underline;
     text-underline-offset: 5px;
 }
 
-a:active {
-    text-decoration: none;
+.text-green {
+    color: green;
 }
 
 .Header {
     display: flex;
     justify-content: center;
     min-width: 344px;
-    padding: 29px 88px;
+    padding: 24px 88px;
 }
 
 .Navbar {

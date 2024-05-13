@@ -2,18 +2,14 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppBody from "./components/AppBody.vue";
 import AppFooter from "./components/AppFooter.vue";
-import SlideBar from "./components/SlideBar.vue";
-const SlideBarOpen = useState("IsSlideBarOpen", () => false);
-const toggleSlideBar = () => {
-    SlideBarOpen = !SlideBarOpen;
-};
 </script>
 
 <template>
     <div class="root">
-        <!-- <SlideBar toggleSlideBar={toggleSlideBar} > -->
         <AppHeader />
-        <AppBody />
+        <div class="Body">
+            <NuxtPage />
+        </div>
         <AppFooter />
     </div>
 </template>
@@ -35,6 +31,29 @@ const toggleSlideBar = () => {
 
 .Body {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 40px 88px;
+    min-width: 344px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 1299px) {
+    .Body {
+        padding: 0px 16px;
+    }
+}
+
+@media screen and (max-width: 814px) {
+    .Body {
+        padding: 0px 16px;
+        gap: 80px;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1264px;
 }
 
 @mixin centralize() {
@@ -52,15 +71,19 @@ img {
     max-width: 100%;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
 a:visited {
     text-decoration: none;
 }
 
 a:active {
-    text-decoration: none;
-}
-
-a:link {
     text-decoration: none;
 }
 

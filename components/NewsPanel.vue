@@ -51,7 +51,7 @@ const DatetoString = (date) => {
     display: flex;
     flex-flow: column;
     gap: 16px;
-    min-width: 304px;
+    width: 304px;
 }
 
 .picture {

@@ -57,7 +57,9 @@ const news = [
     <div class="news">
         <div class="titlesection">
             <p class="sectiontitle">Новости</p>
-            <button class="allnewsbtn">Все новости</button>
+            <NuxtLink to="/news"
+                ><button class="allnewsbtn">Все новости</button></NuxtLink
+            >
         </div>
         <div class="newslist">
             <NewsPanel

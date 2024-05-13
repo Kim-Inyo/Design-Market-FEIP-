@@ -11,7 +11,7 @@ import SubmitRequestDialog from "./SubmitRequestDialog.vue";
     <div class="Footer">
         <div class="container">
             <div class="FooterInfo">
-                <Logo class="Logo" />
+                <NuxtLink to="/"><Logo class="Logo" /></NuxtLink>
                 <ul class="NavLinks">
                     <li v-for="item in variables.navs">
                         <a :href="item.url">{{ item.label }}</a>
@@ -69,11 +69,6 @@ p {
     min-width: 336px;
     background-color: #254741;
     color: white;
-}
-
-.container {
-    width: 100%;
-    max-width: 1264px;
 }
 
 .FooterInfo {

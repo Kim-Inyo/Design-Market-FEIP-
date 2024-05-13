@@ -1,8 +1,9 @@
 <script setup>
-import Slider from "./Slider.vue";
-import Introduction from "./Introduction.vue";
-import Project from "./Project.vue";
-import News from "./News.vue";
+import AppBody from "/components/AppBody.vue";
+import Slider from "/components/Slider.vue";
+import Introduction from "/components/Introduction.vue";
+import Project from "/components/Project.vue";
+import News from "/components/News.vue";
 </script>
 
 <template>
