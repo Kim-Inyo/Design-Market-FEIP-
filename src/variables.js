@@ -1,15 +1,15 @@
 export default {
     navs: [
         {
-            url: '#',
+            url: '/projects',
             label: 'Реализованные проекты'
         },
         {
-            url: '#',
+            url: '/news',
             label: 'Новости'
         },
         {
-            url: '#',
+            url: '/contacts',
             label: 'Контакты'
         },
     ],
@@ -29,5 +29,5 @@ export default {
             svg: 'assets/icons/Location.svg',
             label: 'г. Владивосток ул. Выселковая 49, стр. 3'
         }
-    ]
+    ],
 }

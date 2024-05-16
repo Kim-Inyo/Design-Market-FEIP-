@@ -29,7 +29,7 @@ import SubmitRequestDialog from "./SubmitRequestDialog.vue";
             <DialogContent class="DialogContent">
                 <ul class="NavLinks Links">
                     <li v-for="item in variables.navs">
-                        <a :href="item.url">{{ item.label }}</a>
+                        <NuxtLink :to="item.url">{{ item.label }}</NuxtLink>
                     </li>
                 </ul>
                 <div class="SubmitRequestBtn">
